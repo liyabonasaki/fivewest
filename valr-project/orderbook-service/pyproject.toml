@@ -2,7 +2,7 @@
 name = "valr-project"
 version = "0.1.0"
 description = ""
-authors = ["Saki <sakil@legal.regn.net>"]
+authors = ["Liyabona Saki"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
@@ -13,10 +13,9 @@ gunicorn = "^22.0.0"
 
 
 websockets = "^13.1"
+requests = "^2.32.3"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-
-
