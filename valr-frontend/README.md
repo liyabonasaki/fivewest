@@ -16,6 +16,12 @@ You may also see any lint errors in the console.
 
 navigate to valr-frontend home directory and run the below commands
 
-### `DOCKER_BUILDKIT=1 docker build -t valr-frontend .`
+
+### `docker build -t valr-frontend .`
+
 ### `docker run -d -p 3000:80 valr-frontend`
+
+
+UI 
+![img.png](img.png)
 
