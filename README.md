@@ -22,6 +22,7 @@ Tech Stack
     Python (FastAPI, WebSockets, AsyncIO)
     VALR API (WebSocket streaming for orderbook data)
     Docker (Optional for containerization)
+    A helm chart for kurbenetes deployment
 
 Requirements
 
