@@ -1,8 +1,6 @@
 # Description
 
-This is a web service with endpoint/s to offer 
-
-
+This is a web service with endpoint to monitor and processes real-time data from VALR exchange's USDT/ZAR orderbook using WebSockets and provides an API to retrieve prices.
 
 
 # Set up instructions
@@ -30,16 +28,6 @@ Replace <YourUsername> with your Windows username.
 ## locally
 ```shell
 poetry install 
-```
-## building the container
-```shell
-docker build -t orderbook-service .
-
-```
-## running the container
-```shell
-docker run -d -p 9000:9000 orderbook-service
-
 ```
 ## Configuration
 
@@ -76,16 +64,18 @@ gunicorn orderbook-service.api.service:app --workers 2 --worker-class uvicorn.wo
 
 
 ## Running the service in a docker container
+first navigate to the valr-project\orderbook-service directory 
 
-
-
-Having configured a docker-compose.yml (@see docker-compose.sample.yml to make a copy) simply type
-
+building the container
 ```shell
-docker-compose up
-```
+docker build -t orderbook-service .
 
-## Running the service in an integration environment (dev)
+```
+running the container
+```shell
+docker run -d -p 9000:9000 orderbook-service
+
+```
 
 # API documentation
 
@@ -99,28 +89,12 @@ Returns the price of the quantity
 curl http://localhost:9000/price?quantity=2
 
 ```
- 
+ ![img.png](img.png)
 
 
 
-#### Examples
 
 
-# Testing
-
-## Manual testing
-
-See on the API documentation above some examples from the command line.
-
-## Automated tests
-
-
-```shell
-pytest
-```
-
-## Resource requirements
-## Scaling considerations
 
 
 
